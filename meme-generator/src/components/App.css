@@ -28,6 +28,22 @@ header > p {
     margin-left: 60px;
 }
 
+.homelink {
+    font-family: VT323, monospace;
+    color: whitesmoke;
+    font-size: 50px;
+    margin-left: 60px;
+    text-decoration: none;
+}
+
+.mymemes {
+    font-family: VT323, monospace;
+    color: whitesmoke;
+    font-size: 25px;
+    margin-left: 180px;
+    text-decoration: none;
+}
+
 .meme {
     position: relative;
     width: 90%;
@@ -90,6 +106,7 @@ header > p {
     letter-spacing: 1.5px;
     color: white;
     background: #6441A5;
+    margin-left: 2px;
 }
 
 .meme-form > input::-webkit-input-placeholder { /* Chrome/Opera/Safari */

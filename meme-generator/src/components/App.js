@@ -1,17 +1,18 @@
 import React, { Component } from 'react';
 import './App.css';
 import Header from './Header'
-import MemeGenerator from './MemeGenerator'
+import { BrowserRouter as Router } from 'react-router-dom'
 
 class App extends Component {
   render() {
     return (
       <div>
-        <Header />
-        <MemeGenerator />
+      	<Router> 
+	        <Header />
+        </Router>
       </div>
     );
   }
 }
 
-export default App;
+export default App
