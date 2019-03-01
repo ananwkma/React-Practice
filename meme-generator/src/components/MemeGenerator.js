@@ -1,4 +1,6 @@
 import React, { Component } from 'react'
+import { addMeme } from '../actions'
+import { connect } from 'react-redux'
 
 class MemeGenerator extends Component {
 	
@@ -36,6 +38,15 @@ class MemeGenerator extends Component {
 
 	handleSubmit = (e) => {
 		e.preventDefault()
+		const memeId = Date.now()
+		const { imgURL, topText, botText } = this.state 
+		this.props.dispatch(addMeme({
+			id: memeId,
+			imgURL: imgURL,
+			topText: topText,
+			botText: botText,
+		}))
+		console.log(this.props.mymemes)
 	}
 
   render() {
@@ -57,4 +68,6 @@ class MemeGenerator extends Component {
   }
 }
 
-export default MemeGenerator 
+export default connect(state => ({
+	mymemes: state.mymemes
+}))(MemeGenerator) 
