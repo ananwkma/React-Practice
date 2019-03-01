@@ -41,10 +41,10 @@ class MemeGenerator extends Component {
 		const memeId = Date.now()
 		const { imgURL, topText, botText } = this.state 
 		this.props.dispatch(addMeme({
-			id: memeId,
 			imgURL: imgURL,
 			topText: topText,
 			botText: botText,
+			id: memeId,
 		}))
 		console.log(this.props.mymemes)
 	}

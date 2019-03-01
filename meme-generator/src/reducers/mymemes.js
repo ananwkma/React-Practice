@@ -3,7 +3,7 @@ import { ADD_MEME } from '../actions'
 export default function mymemes(state={}, action) {
 	switch(action.type) {
 		case ADD_MEME:
-			const {imgURL, topText, botText} = action.id
+			const {imgURL, topText, botText, id} = action.id
 			let meme = {
 				imgURL: imgURL,
 				topText: topText,
@@ -11,7 +11,7 @@ export default function mymemes(state={}, action) {
 			}
 			return {
 				...state, 
-				[action.id.id]: meme
+				[id]: meme
 			}
 		default:
 			return state

@@ -4,14 +4,14 @@ import { connect } from 'react-redux'
 class MyMemes extends React.Component {
 
 	renderMemes = (memes) => {
-		let mymemes = Object.values(memes)
+		let mymemes = Object.entries(memes)
 		return (
 			<div>
-				{mymemes.map(id => (
-					<ul>
-						<li> {id.imgURL} </li>
-						<li> {id.topText} </li>
-						<li> {id.botText} </li>
+				{mymemes.map(meme => (
+					<ul key={meme[0]}>
+						<li> {meme[1].imgURL} </li>
+						<li> {meme[1].topText} </li>
+						<li> {meme[1].botText} </li>
 					</ul>
 				))}
 			</div>

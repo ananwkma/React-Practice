@@ -1,11 +1,11 @@
 export const ADD_MEME = 'ADD_MEME'
 
-export function addMeme (id, imgURL, topText, botText) {
+export function addMeme (imgURL, topText, botText, id) {
 	return {
 		type: ADD_MEME, 
-		id,
 		imgURL,
 		topText,
 		botText,
+		id,
 	}
 }
