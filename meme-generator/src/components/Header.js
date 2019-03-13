@@ -13,7 +13,7 @@ function Header() {
 					My Memes 
 				</Link>
 			</header>
-			<Route exact path='/'component={MemeGenerator}/>
+			<Route exact path='/' component={MemeGenerator}/>
 			<Route path='/mymemes' component={MyMemes}/>
 		</div>
 	)
